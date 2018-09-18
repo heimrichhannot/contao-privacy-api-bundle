@@ -1,0 +1,5 @@
+services:
+  huh.privacy_api.resource.protocol_entry:
+    class: HeimrichHannot\PrivacyApiBundle\ApiResource\ProtocolEntryResource
+    tags:
+    - { name: huh.api.resource, alias: privacy_protocol_entry }
