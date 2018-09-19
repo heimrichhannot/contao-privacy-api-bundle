@@ -1,5 +1,21 @@
 services:
-  huh.privacy_api.resource.protocol_entry:
+  huh.privacy_api.resource.privacy_protocol_entry_opt_in:
     class: HeimrichHannot\PrivacyApiBundle\ApiResource\ProtocolEntryResource
     tags:
-    - { name: huh.api.resource, alias: privacy_protocol_entry }
+    - { name: huh.api.resource, alias: privacy_protocol_entry_opt_in }
+  huh.privacy_api.resource.privacy_protocol_entry_opt_out:
+    class: HeimrichHannot\PrivacyApiBundle\ApiResource\ProtocolEntryResource
+    tags:
+    - { name: huh.api.resource, alias: privacy_protocol_entry_opt_out }
+  huh.privacy_api.event_listener.callback_listener:
+    class: HeimrichHannot\PrivacyApiBundle\EventListener\CallbackListener
+    arguments:
+    - "@contao.framework"
+  huh.privacy_api.event_listener.hook_listener:
+    class: HeimrichHannot\PrivacyApiBundle\EventListener\HookListener
+    arguments:
+    - "@contao.framework"
+  huh.privacy_api.util.privacy_api_util:
+    class: HeimrichHannot\PrivacyApiBundle\Util\PrivacyApiUtil
+    arguments:
+    - "@contao.framework"
