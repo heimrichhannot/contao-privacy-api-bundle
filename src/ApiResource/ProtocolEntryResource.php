@@ -41,28 +41,13 @@ class ProtocolEntryResource implements ResourceInterface, FrameworkAwareInterfac
             ];
         }
 
-        switch (basename($request->getPathInfo())) {
-            case static::MODE_OPT_IN:
-                return $this->optIn($data, $request, $user);
-
-                break;
-            case static::MODE_OPT_OUT:
-                return $this->optOut($data, $request, $user);
-
-                break;
-        }
-
-        return [
-            'state'   => 'error',
-            'message' => 'No mode specified.'
-        ];
+        return $this->doOpt($data, $request, $user);
     }
 
-    protected function optIn(array $requestData, Request $request, UserInterface $user)
+    protected function doOpt(array $requestData, Request $request, UserInterface $user)
     {
         $protocolManager = new ProtocolManager();
         $protocolUtil    = new ProtocolUtil();
-        $categoryManager = System::getContainer()->get('huh.categories.manager');
         $app             = $user->getApp();
 
         if (($protocolArchive = System::getContainer()->get('huh.utils.model')->findModelInstanceByPk(
@@ -154,14 +139,6 @@ class ProtocolEntryResource implements ResourceInterface, FrameworkAwareInterfac
         return [
             'state'   => 'success',
             'message' => 'Opt-in successful.'
-        ];
-    }
-
-    protected function optOut(array $data, Request $request, UserInterface $user)
-    {
-        return [
-            'state'   => 'success',
-            'message' => 'Opt-out successful.'
         ];
     }
 
