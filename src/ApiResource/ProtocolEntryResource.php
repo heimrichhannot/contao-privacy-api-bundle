@@ -23,9 +23,6 @@ class ProtocolEntryResource implements ResourceInterface, FrameworkAwareInterfac
     use FrameworkAwareTrait;
     use ContainerAwareTrait;
 
-    const MODE_OPT_IN  = 'privacy_protocol_entry_opt_in';
-    const MODE_OPT_OUT = 'privacy_protocol_entry_opt_out';
-
     /**
      * @inheritDoc
      */
@@ -138,7 +135,7 @@ class ProtocolEntryResource implements ResourceInterface, FrameworkAwareInterfac
 
         return [
             'state'   => 'success',
-            'message' => 'Opt-in successful.'
+            'message' => 'Opt successful.'
         ];
     }
 

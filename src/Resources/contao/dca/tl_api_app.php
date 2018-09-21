@@ -20,7 +20,7 @@ $dca['palettes']['__selector__'][] = 'privacyAddAppCategoryToReferenceEntity';
 /**
  * Subpalettes
  */
-$dca['subpalettes']['addPrivacyActivationProtocolEntry'] = 'privacyProtocolActivationNotification,privacyProtocolActivationJumpTo,privacyProtocolActivationArchive,privacyProtocolActivationEntryType,privacyProtocolActivationDescription';
+$dca['subpalettes']['addPrivacyActivationProtocolEntry'] = 'privacyProtocolActivationNotification,privacyProtocolActivationJumpTo';
 $dca['subpalettes']['privacyAddAppCategoryToReferenceEntity'] = 'privacyReferenceCategoryField';
 
 /**
@@ -34,9 +34,6 @@ $fields = [
     'addPrivacyActivationProtocolEntry'          => $protocolManager->getSelectorFieldDca(),
     'privacyProtocolActivationNotification'      => $protocolManager->getNotificationFieldDca(),
     'privacyProtocolActivationJumpTo'            => $protocolManager->getActivationJumpToFieldDca(),
-    'privacyProtocolActivationArchive'           => $protocolManager->getArchiveFieldDca(),
-    'privacyProtocolActivationEntryType'         => $protocolManager->getTypeFieldDca(),
-    'privacyProtocolActivationDescription'       => $protocolManager->getDescriptionFieldDca(),
     'privacyAddAppCategoryToReferenceEntity'     => [
         'label'     => &$GLOBALS['TL_LANG']['tl_api_app']['privacyAddAppCategoryToReferenceEntity'],
         'exclude'   => true,
@@ -84,9 +81,5 @@ $fields = [
 ];
 
 $fields['addPrivacyActivationProtocolEntry']['label'][0]     .= ' (nach Aktivierung)';
-$fields['privacyProtocolActivationArchive']['label'][0]      .= ' (nach Aktivierung)';
-$fields['privacyProtocolActivationEntryType']['label'][0]    .= ' (nach Aktivierung)';
-$fields['privacyProtocolActivationDescription']['label'][0]  .= ' (nach Aktivierung)';
-$fields['privacyProtocolActivationFieldMapping']['label'][0] .= ' (nach Aktivierung)';
 
 $dca['fields'] += $fields;
