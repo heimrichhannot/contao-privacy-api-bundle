@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2018-10-16
+
+### Fixed
+- submission data for reference entity update
+
 ## [1.0.3] - 2018-09-21
 
 ### Fixed

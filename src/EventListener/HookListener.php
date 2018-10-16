@@ -26,7 +26,7 @@ class HookListener
         $this->framework = $framework;
     }
 
-    public function addAppCategoriesToModel($submissionData, $module)
+    public function addAppCategoriesToModel($jwtData, $module)
     {
         if (null === ($app = System::getContainer()->get('huh.utils.model')->findModelInstanceByPk('tl_api_app', $module->formHybridApiApp)))
         {
@@ -40,7 +40,7 @@ class HookListener
 
         $protocolUtil = new ProtocolUtil();
 
-        if (!$submissionData)
+        if (!$jwtData->submission)
         {
             return;
         }
@@ -48,7 +48,7 @@ class HookListener
         $instance = $protocolUtil->findReferenceEntity(
             $protocolArchive->referenceFieldTable,
             $protocolArchive->referenceFieldForeignKey,
-            $submissionData->{$protocolArchive->referenceFieldForeignKey}
+            $jwtData->submission->{$protocolArchive->referenceFieldForeignKey}
         );
 
         if ($instance instanceof Model)
