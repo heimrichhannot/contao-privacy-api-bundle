@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2019-02-28
+
+### Changed
+- updated privacy module and api-bundle deps
+
 ## [1.0.4] - 2018-10-16
 
 ### Fixed

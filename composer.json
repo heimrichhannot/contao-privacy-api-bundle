@@ -7,8 +7,8 @@
     "php": ">=7.1",
     "symfony/framework-bundle": "^3.3",
     "contao/core-bundle": "^4.4",
-    "heimrichhannot/contao-privacy": "^1.6",
-    "heimrichhannot/contao-api-bundle": "^1.0"
+    "heimrichhannot/contao-privacy": "^2.0",
+    "heimrichhannot/contao-api-bundle": "^2.0"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0",
