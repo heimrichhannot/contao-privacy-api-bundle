@@ -5,7 +5,6 @@
   "license": "proprietary",
   "require": {
     "php": ">=7.1",
-    "symfony/framework-bundle": "^3.3",
     "contao/core-bundle": "^4.4",
     "heimrichhannot/contao-privacy": "^2.0",
     "heimrichhannot/contao-api-bundle": "^2.0"
