@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2021-06-10
+
+- fixed for contao 4.9
+
 ## [1.2.0] - 2021-06-07
 
 - removed symfony framework dep

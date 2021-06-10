@@ -1,4 +1,7 @@
 services:
+  _defaults:
+    public: true
+
   huh.privacy_api.resource.privacy_protocol_entry_opt_in:
     class: HeimrichHannot\PrivacyApiBundle\ApiResource\ProtocolEntryResource
     tags:
